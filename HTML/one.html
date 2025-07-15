@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1 id="mainTitle">Original Title</h1>
+        <p id="text">This is some original text.</p>
+        <img id="myImage" src="c:\Users\SRIT CSE\Downloads\81tA-ixFpdL._AC_SL1500_.jpg" alt="Original Image">
+        <a id="myLink" href="https://srit.ac.in" target="_blank">SRIT Home page:</a> 
+        <button onclick="changeContent()">Change content</button>
+        <script>
+            function changeContent(){
+                //change the inner text
+                document.getElementById("text").innerText="This is some changed text."
+                document.getElementById('mainTitle').innerHTML='<div>Updated Title </div>'
+                //change the image source and alt
+                const s=document.getElementById('myImage')
+                s.src="c:\Users\SRIT CSE\Downloads\download.jpg"
+                s.alt="no image"
+                //change the link andtext
+                const l=document.getElementById('myLink')
+                l.href="https://google.com"
+                l.innerHTML="Google"
+            }
+        </script>
+    </body>
+</html>

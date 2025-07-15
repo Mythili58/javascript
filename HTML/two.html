@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SRIT</title>
+    </head>
+    <body>
+        <h1 id="myid">Welcome to SRIT</h1>
+        <p id="text">Srit is located in anathapur.</p>
+        <img id="myimg" src="c:\Users\SRIT CSE\Downloads\welcome-sign-letters-with-confetti-background-celebration-greeting-holiday-illustration-photo.jpg" alt="No image" width="500">
+        <p>Know about SRIT College in Google:
+        <a id="link" href="https://google.com">GOOGLE</a>
+        </p>
+        <button onclick="go()">GO</button>
+        <script>
+            function go(){
+                document.getElementById("myid").innerText="SRIT COllege Offers Btech,Mtech"
+                document.getElementById("text").innerText="Availabloe branches CSE,CSM,CSD,EEE,ECE"
+                const s=document.getElementById("myimg")
+                s.src="SRIT-LOGO.jpeg"
+                s.alt="No image"
+                const c=document.getElementById("link")
+                c.href="https://srit.ac.in"
+                c.innerHTML="SRIT"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <title>
+            DOM selector example
+        </title>
+        <style>
+            .myClass{
+                color:greenyellow
+            }
+            .highlight{
+                background-color:greenyellow
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="myId">This is an element with Id</h2>
+
+        <p class="myClass">Paragraph 1 with class 'myClass'</p>
+        <p class="myClass">Paragraph 2 with class 'myClass'</p>
+
+        <div class="myClass">Div with class</div>
+        <div>Just a div</div>
+        <script>
+            //1.Get Element By ID
+            const s=document.getElementById("myId");
+            s.style.color="blue";
+            console.log(s);
+
+            //2.Get Element By ClassName
+            const c=document.getElementsByClassName("myClass");
+            for(let i;i<c.length;i++){
+                c[i].style.fontWeight='bold'
+            }
+            console.log(c);
+            //3.get Element By TagName div
+            const d=document.getElementsByTagName('div');
+            for(let i=0;i<d.length;i++){
+                d[i].style.border='2px solid red';
+            }
+            console.log(d);
+
+            //4.query selector 
+            const queryS=document.querySelector('.myClass');
+            queryS.classList.add('highlight');
+            console.log(queryS);
+            const querySelectAll=document.querySelectorAll('div.MyClass');
+            querySelectAll.forEach(el=>{
+                el.style.padding='10px'
+            });
+            console.log(querySelectAll);
+        </script>
+    </body>
+</html>
